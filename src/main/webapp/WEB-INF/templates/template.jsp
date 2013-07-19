@@ -14,11 +14,17 @@
 <script src="<c:url value="/bootstrap/js/bootstrap-ie.js" />"></script>
 
 <d:head />
-
+<script>
+  $(function() {
+  });
+</script>
 </head>
 <body>
   <%@ include file="/WEB-INF/commons/header.jsp"%>
-
+  <div id="main">
+    <div id="message">${requestScope._msg}</div>
+    <d:body />
+  </div>
   <%@ include file="/WEB-INF/commons/footer.jsp"%>
 </body>
 </html>

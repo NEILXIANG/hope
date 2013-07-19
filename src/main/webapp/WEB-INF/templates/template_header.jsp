@@ -22,7 +22,10 @@
 <![endif]-->
 
 <d:head />
-
+<script>
+  $(function() {
+  });
+</script>
 </head>
 <body>
   <d:body />

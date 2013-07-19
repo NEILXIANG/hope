@@ -1,7 +1,5 @@
 package com.hope.dao;
 
-
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.dao.DataAccessException;
@@ -20,7 +18,7 @@ public abstract class BaseDao {
   public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
     this.jdbcTemplate = jdbcTemplate;
   }
-  
+
   protected <T> T queryForNullable(String sql, Object[] args, RowMapper<T> rowMapper) throws DataAccessException {
     try {
       return jdbcTemplate.queryForObject(sql, args, rowMapper);
@@ -31,6 +29,5 @@ public abstract class BaseDao {
 
     return null;
   }
-
 
 }
